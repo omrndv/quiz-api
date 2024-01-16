@@ -76,7 +76,7 @@ exports.findOne = async (req, res) => {
     try {
         const quiz = await Quiz.findByPk(id, { rejectOnEmpty: true })
         res.json({
-            message: "Quizzes retrieved successfully with id=${id}.",
+            message: `Quizzes retrieved successfully with id=${id}.`,
             data: quiz,
         });
     } catch (error) {
@@ -95,7 +95,7 @@ exports.getByCategoryId = async (req, res) => {
         }
     })
     res.json({
-        message: 'Quizzes retrieved successfully with cateroryId = ${id}.',
+        message: `Quizzes retrieved successfully with cateroryId = ${id}.`,
         data: quizzes,
     });
 }
@@ -109,7 +109,7 @@ exports.getByLevelId = async (req, res) => {
         }
     })
     res.json({
-        message: 'Quizzes retrieved successfully with levelId = ${id}.',
+        message: `Quizzes retrieved successfully with levelId = ${id}.`,
         data: quizzes,
     });
 }
